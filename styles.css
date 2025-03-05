@@ -1,0 +1,170 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap');
+
+/* Global Box Sizing */
+*, *::before, *::after {
+    box-sizing: border-box;  /* Ensures padding and border are included in element's width and height */
+}
+
+html {
+    font-size: 16px;  /* Base font size for the root element (1rem = 16px) */
+}
+
+body {
+    font-family: 'Arimo', Arial, sans-serif;
+    font-size: 1rem;  /* Default font size based on the root */
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;  /* Fallback color */
+    background-image: url('images/background.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* Header Styles */
+header {
+    width: 100%;  /* Full width */
+    height: 10vh;  /* 10% of the viewport height */
+    background-color: #333;
+    color: #fff;
+    padding: 2rem;  /* Padding is relative to the font size */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;  /* 2 times the font size of the root */
+    margin: 1rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1rem;  /* Inherits font size from body */
+    margin: 0.5rem 0;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 2rem;  /* Horizontal margin relative to root font size */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;  /* Relative to the root font size */
+    transition: color 0.3s ease;  /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #ff6347; /* Tomato red color on hover */
+    text-decoration: underline;
+}
+
+/* Button Styling */
+button {
+    background-color: #333; /* Dark background color */
+    color: white; /* White text color */
+    border: none; /* Removes default border */
+    padding: 0.5em 1em; /* Padding inside the button */
+    cursor: pointer; /* Shows pointer cursor when hovered */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+button:hover {
+    background-color: #555; /* Darker background when hovered */
+}
+
+/* Image Styling */
+img {
+    max-width: 100%; /* Ensures images are responsive and fit within their container */
+    border-radius: 10px; /* Adds rounded corners to images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow around the image */
+}
+
+/* Main Content Styling */
+main {
+    padding: 2rem;
+    background-color: #fff;
+    margin: 5% auto;  /* 5% margin on top and bottom */
+}
+
+/* Fluid Layout for index.html */
+body.index-page main {
+    max-width: 80%;  /* Main content takes up 80% of the width */
+}
+
+/* Fixed Layout for resume.html */
+body.resume-page main {
+    max-width: 1200px;  /* Fixed width for main content */
+    margin: 5% auto;  /* Center the main content */
+}
+
+h2 {
+    font-size: 1.6rem;  /* 1.6 times the root font size */
+    margin-bottom: 2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;  /* Smaller base font size for smaller screens */
+    }
+
+    body {
+        font-size: 1rem;  /* Adjust font size for readability */
+    }
+
+    header h1 {
+        font-size: 1.5rem;  /* Adjust header font size for smaller screens */
+    }
+
+    header {
+        height: 15vh;  /* Increase the height of the header on small screens */
+        padding: 1.5rem;  /* Reduce padding to fit content better */
+    }
+
+    main {
+        padding: 1.5rem;  /* Adjust padding for a more compact layout */
+        margin: 5% auto;
+        max-width: 100%;  /* Ensure it takes up full width on smaller screens */
+    }
+
+    nav ul li {
+        margin: 0 1rem;  /* Reduce horizontal margin on smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 1rem;  /* Adjust font size of links for smaller screens */
+    }
+
+    footer {
+        padding: 1.5rem;  /* Reduce padding in footer for small screens */
+    }
+}
